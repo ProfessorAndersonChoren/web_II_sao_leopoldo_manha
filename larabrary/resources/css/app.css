@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-label {
+    @apply mb-2 text-sm font-medium text-slate-500;
+}
+.custom-input {
+    @apply px-4 py-3  rounded-sm form-input !important;
+}
+
+.custom-input:disabled {
+    @apply px-4 py-3 rounded-sm form-input bg-slate-400 text-white !important;
+}
+
+.custom-input:invalid {
+    @apply bg-red-400 text-white !important;
+}
+
+.custom-input::placeholder {
+    @apply text-white !important;
+}
+
+.custom-button {
+    @apply p-4 mt-4 rounded-md;
+}
+
+.action-button {
+    @apply p-2 m-2 rounded-md;
+}
+
+.red-button {
+    @apply text-white bg-red-700;
+}
+
+.orange-button {
+    @apply text-white bg-orange-500;
+}
+
+.green-button {
+    @apply text-white bg-green-800;
+}
+
+.custom-link-menu {
+    @apply text-sm font-bold text-center text-white;
+}
+
+.custom-link-menu-item {
+    @apply block text-sm font-bold text-center text-red-500;
+}
+
+.action-td {
+    @apply flex items-center justify-center gap-2;
+}
+#drop-down-icon {
+    position: relative;
+}
+#drop-down-menu {
+    position: absolute;
+    top: 75px;
+    right: 8px;
+}
+
+input {
+    @apply border border-slate-500 text-slate-500 !important;
+}
+
+th {
+    @apply p-4 text-white;
+}
+
+tbody > tr:nth-child(even) {
+    @apply bg-red-400;
+}
+tbody > :nth-child(odd) {
+    @apply bg-red-300;
+}
+td {
+    @apply text-lg text-center;
+}
