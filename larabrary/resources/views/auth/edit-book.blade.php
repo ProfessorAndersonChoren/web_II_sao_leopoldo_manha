@@ -2,6 +2,13 @@
 
 @section('main-content')
     <h1 class="mb-8 text-6xl text-center text-red-950">Editar o livro {{ $book->title }}</h1>
+    @if ($errors->all())
+        <x-alert context='orange'>
+            @foreach ($errors->all() as $error)
+                <p>{{ $error }}</p>
+            @endforeach
+        </x-alert>
+    @endif
     <form action="{{ route('book.update', $book->id) }}" method="post" class="flex flex-col w-full">
         @csrf
         @method('PUT')
